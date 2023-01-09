@@ -9,6 +9,7 @@
 		<maven.compiler.target>11</maven.compiler.target>
 		<jupiter.version>5.9.1</jupiter.version>
 		<surefire.version>3.0.0-M7</surefire.version>
+		<mokito.version>4.11.0</mokito.version>
 	</properties>
 	<build>
 		<pluginManagement>
@@ -27,6 +28,11 @@
 			<artifactId>junit-jupiter-engine</artifactId>
 			<version>${jupiter.version}</version>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>${mokito.version}</version>
 		</dependency>
 	</dependencies>
 </project>
