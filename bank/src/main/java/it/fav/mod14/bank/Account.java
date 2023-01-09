@@ -109,6 +109,10 @@ public class Account {
 	public String getEmail() {
 		return email;
 	}
+	
+	public String getOwner() {
+		return owner;
+	}
 
 	public NotificationType getNotificationPreference() {
 		return notificationPreference;
