@@ -50,8 +50,8 @@ public class Account {
 		}
 
 		public Account build() {
-			if (this.owner.isEmpty()) {
-				throw new IllegalArgumentException("Owner must be set");
+			if(this.owner.isEmpty()) {
+				throw new IllegalStateException("Owner must be set");
 			}
 			String owner = this.owner.get();
 			String email = this.email.orElse(EMAIL_DEFAULT);
@@ -122,10 +122,7 @@ public class Account {
 		this.notificationPreference = notificationPreference;
 	}
 
-	public boolean makeTransfer(String destinationAccountCode, double amount) {
-		EmailNotificator notificator = new EmailNotificator();
-		SETRemoteBankOperator remoteBankOperator = new SETRemoteBankOperator();
-		
+	public boolean makeTransfer(String destinationAccountCode, double amount, Notificator notificator, RemoteBankOperator remoteBankOperator) {
 		if(getBalance() >= amount) {
 			if(remoteBankOperator.transfer(destinationAccountCode, amount)) {
 				withdraw(amount);
