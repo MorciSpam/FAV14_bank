@@ -146,6 +146,11 @@ public class Account {
 			return false;
 		}
 	}
+	
+	public double setBalance40() {
+		this.balance = 40;
+		return this.balance;
+	}
 
 	@Override
 	public String toString() {
