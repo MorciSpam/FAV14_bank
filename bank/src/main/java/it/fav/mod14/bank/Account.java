@@ -28,6 +28,7 @@ public class Account {
 			this.balance = Optional.of(balance);
 			return this;
 		}
+		
 
 		public Builder setId(int id) {
 			this.id = Optional.of(id);
@@ -74,7 +75,12 @@ public class Account {
 	public static Builder builder() {
 		return new Builder();
 	}
-
+	
+	public double setBalance20() {
+		this.balance=20.0;
+		return this.balance;
+	}
+	
 	private Account(String owner, String email, String phoneNumber, int id, double balance,
 			NotificationType notificationPreference) {
 		this.owner = owner;
