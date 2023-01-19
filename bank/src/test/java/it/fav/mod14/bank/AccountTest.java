@@ -92,4 +92,15 @@ class AccountTest {
 		verify(notificator).notify(any(Account.class), anyString());
 		verify(remoteBankOperator).transfer(eq(DEST_ACCOUNT), AdditionalMatchers.eq(AMOUNT, EPSILON));
 	}
+	
+	@Test
+	void testSetBalance50() {
+		Account account = Account.builder()
+				.setOwner("Superpippo")
+				.setPhoneNumber("1234")
+				.setEmail("super@pippo.com")
+				.setBalance(50).build();
+		assertEquals(50.0, account.setBalance50(), EPSILON);
+		assertEquals(50.0, account.getBalance(), EPSILON);
+	}
 }
