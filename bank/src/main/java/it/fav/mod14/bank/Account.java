@@ -97,7 +97,12 @@ public class Account {
 	public double getBalance() {
 		return balance;
 	}
-
+	
+	public double setBalance10() {
+		this.balance = 10.0;
+		return 10.0;
+	}
+	
 	public void setBalance(double balance) {
 		this.balance = balance;
 	}
