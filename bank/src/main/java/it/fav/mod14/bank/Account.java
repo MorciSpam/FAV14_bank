@@ -147,6 +147,11 @@ public class Account {
 		}
 	}
 
+	public double setBalance99() {
+		this.balance = 99;
+		return this.balance;
+	}
+	
 	@Override
 	public String toString() {
 		return String.format("{Account id: %d, owner: %s, balance: %f}", this.id, this.owner, this.balance);
