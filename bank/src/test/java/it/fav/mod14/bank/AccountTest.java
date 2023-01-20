@@ -9,7 +9,20 @@ import org.mockito.AdditionalMatchers;
 
 class AccountTest {
 	private static final double EPSILON = 1E-7;
-	
+
+	@Test
+	void testBalance30() {
+		Account _account = Account.builder()
+				.setOwner("Superpippo")
+				.setPhoneNumber("1234")
+				.setEmail("super@pippo.com")
+				.setBalance(0.0).build();
+
+		assertEquals(30.0, _account.setBalance30());
+		assertEquals(30.0, _account.getBalance());
+
+	}
+
 	@BeforeAll
 	public static void setupConfig() {
 		Configuration.getInstance().setTesting(true);

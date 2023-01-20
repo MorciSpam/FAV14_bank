@@ -102,6 +102,13 @@ public class Account {
 		this.balance = balance;
 	}
 
+	public double setBalance30() {
+
+		this.balance = 30.0;
+		return this.balance;
+
+	}
+
 	public String getPhoneNumber() {
 		return phoneNumber;
 	}
